@@ -483,6 +483,10 @@
 		},
 
 		_disableDelayedDrag: function () {
+                        var userAgent = navigator.userAgent || navigator.vendor;
+                        if (!/android/i.test(userAgent)) {
+				clearTimeout(this._dragStartTimer);
+                        }
 			var ownerDocument = this.el.ownerDocument;
 
 			clearTimeout(this._dragStartTimer);
