@@ -487,6 +487,7 @@
                         if (!/android/i.test(userAgent)) {
 				clearTimeout(this._dragStartTimer);
                         }
+			if(!this.el) return;
 			var ownerDocument = this.el.ownerDocument;
 
 			clearTimeout(this._dragStartTimer);
